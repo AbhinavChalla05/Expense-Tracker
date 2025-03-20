@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - ExpenseEase</title>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ExpenseEase</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Financial Reports</h1>
+        </div>
+        
+        <div class="report-grid">
+            <div class="report-card">
+                <h2 class="report-title">Expense Distribution</h2>
+                <div class="chart-container">
+                    <div class="pie-chart" id="expense-pie-chart"></div>
+                </div>
+                <div class="chart-legend" id="expense-legend">
+                </div>
+            </div>
+            
+            <div class="report-card">
+                <h2 class="report-title">Savings Analysis</h2>
+                <div class="savings-chart" id="savings-chart">
+                </div>
+                <div class="summary-text" id="savings-summary">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ExpenseEase. All rights reserved.</p>
+    </footer>
+
+    <script src="reports.js"></script>
+</body>
+</html>

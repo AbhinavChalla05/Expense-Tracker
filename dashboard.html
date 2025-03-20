@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ExpenseEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ExpenseEase</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Dashboard</h1>
+            <a href="transactions.html" class="btn">View & Edit Details</a>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h2 class="card-title">Balance</h2>
+                <div class="amount balance">$1,540.25</div>
+                <p class="last-updated">Last updated: Today</p>
+            </div>
+            <div class="dashboard-card">
+                <h2 class="card-title">Income</h2>
+                <div class="amount income">$2,850.00</div>
+                <p>Total Income</p>
+            </div>
+            <div class="dashboard-card">
+                <h2 class="card-title">Expenses</h2>
+                <div class="amount expense">$1,309.75</div>
+                <p>Total Expenses</p>
+            </div>
+        </div>
+        
+        <div class="recent-transactions">
+            <div class="transaction-header">
+                <h2 class="card-title">Recent Transactions</h2>
+                <a href="transactions.html" class="view-all">View All</a>
+            </div>
+            <ul class="transaction-list">
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 ExpenseEase. All rights reserved.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

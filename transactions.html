@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - ExpenseEase</title>
+    <link rel="stylesheet" href="transactions.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ExpenseEase</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Transactions</h1>
+            <div class="button-group">
+                <button class="btn" onclick="addTransaction()">+ Add Transaction</button>
+                <button class="btn btn-secondary" onclick="addDemoData()">Add Demo Data</button>
+                <button class="btn btn-danger" onclick="clearAllData()">Clear All Data</button>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label class="filter-label" for="date-filter">Date:</label>
+                <select class="filter-select" id="date-filter" onchange="filterTransactions()">
+                    <option value="all">All Time</option>
+                    <option value="month" selected>This Month</option>
+                    <option value="week">This Week</option>
+                    <option value="day">Today</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label" for="type-filter">Type:</label>
+                <select class="filter-select" id="type-filter" onchange="filterTransactions()">
+                    <option value="all" selected>All Types</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label" for="category-filter">Category:</label>
+                <select class="filter-select" id="category-filter" onchange="filterTransactions()">
+                    <option value="all" selected>All Categories</option>
+                    <option value="food">Food</option>
+                    <option value="bills">Bills</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="transport">Transport</option>
+                    <option value="income">Income</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label" for="sort-filter">Sort By:</label>
+                <select class="filter-select" id="sort-filter" onchange="sortTransactions()">
+                    <option value="date-desc">Date (Newest First)</option>
+                    <option value="date-asc">Date (Oldest First)</option>
+                    <option value="amount-desc">Amount (High to Low)</option>
+                    <option value="amount-asc">Amount (Low to High)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <button class="btn btn-secondary" onclick="viewReports()">View Reports</button>
+            </div>
+        </div>
+        
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="transactions-body">
+            </tbody>
+        </table>
+        
+        <div class="pagination">
+            <a href="#" class="pagination-link active">1</a>
+            <a href="#" class="pagination-link">2</a>
+            <a href="#" class="pagination-link">3</a>
+            <a href="#" class="pagination-link">Next</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 ExpenseEase. All rights reserved.</p>
+    </footer>
+
+    <script src="transactions.js"></script>
+</body>
+</html>
